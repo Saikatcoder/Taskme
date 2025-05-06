@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <!-- SweetAlert2 CDN -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+</head>
+<body class="">
+    <div class="flex flex-col lg:flex-row min-h-screen">
+        <!-- Left Side Image -->
+        <img src="./hero.jpg" 
+             class="w-full lg:w-6/12 h-[200px] lg:h-auto object-cover" 
+             alt="">
+      
+        <!-- Right Side Content -->
+        <div class="w-full lg:w-6/12 p-6 sm:p-8 md:p-10 lg:p-12 bg-white">
+          
+          <!-- Logo Section -->
+          <div class="flex justify-center items-center gap-2">
+            <i class="fa-solid fa-thumbtack text-3xl sm:text-4xl text-[#ff8880]"></i>
+            <h1 class="text-3xl sm:text-4xl font-bold text-[#ff8880]">TaskMe</h1>
+          </div>
+      
+          <!-- Search Section -->
+          <div class="flex flex-col sm:flex-row gap-4 mt-8">
+            <input 
+              type="text" 
+              class="px-3 py-2 border border-[#ff8880] rounded flex-1" 
+              placeholder="Search this list" />
+      
+            <button 
+              class="bg-[#ff8880] px-6 py-2 text-white font-medium rounded w-full sm:w-auto"
+              onclick="openDialog()">
+              <i class="fa-solid fa-plus mr-1"></i> New Task
+            </button>
+          </div>
+      
+          <!-- Table Section -->
+          <div class="overflow-x-auto mt-8">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="bg-[#bdd0fb] text-left text-[#474af1]">
+                  <th class="p-3">SN</th>
+                  <th class="p-3">Task</th>
+                  <th class="p-3">Date</th>
+                  <th class="p-3">Status</th>
+                  <th class="p-3">Action</th>
+                </tr>
+              </thead>
+              <tbody id="task-list">
+              </tbody>
+            </table>
+          </div>
+      
+        </div>
+      </div>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
